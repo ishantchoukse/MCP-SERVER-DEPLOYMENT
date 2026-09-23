@@ -1,17 +1,17 @@
 from mcp.server.mcpserver import MCPServer
 
-mcp = MCPServer("mcp-server-deployment")
-
+mcp=MCPServer("Demo")
 
 @mcp.tool()
-def hello(name: str) -> str:
-    """Say hello to someone.
-
-    Args:
-        name: The name to greet
+def add_two_number(first_number:int,second_number:int) -> int:
     """
-    return f"Hello, {name}!"
+    Add two numbers
+    args:
+        first_number: type integer
+        second_number: type integer
+    returns:
+        int: addition result
+    """
 
+    return first_number+second_number
 
-def main():
-    mcp.run()

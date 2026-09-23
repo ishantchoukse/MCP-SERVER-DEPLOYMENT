@@ -1,6 +1,6 @@
 # MCP Server Deployment
 
-A simple MCP (Model Context Protocol) server implementation with a hello tool.
+A simple MCP (Model Context Protocol) server implementation with an addition tool.
 
 ## Installation
 
@@ -24,16 +24,19 @@ uv run python -m mcp_server_deployment
 
 ### Available Tools
 
-#### `hello`
+#### `add_two_number`
 
-Say hello to someone.
+Add two numbers together.
 
 **Parameters:**
-- `name` (string): The name to greet
+- `first_number` (int): First number to add
+- `second_number` (int): Second number to add
+
+**Returns:** int - The sum of the two numbers
 
 **Example:**
 ```
-hello("World") -> "Hello, World!"
+add_two_number(5, 3) -> 8
 ```
 
 ## Development
