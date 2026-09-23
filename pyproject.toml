@@ -1,7 +1,7 @@
 [project]
 name = "mcp-server-deployment"
 version = "0.1.0"
-description = "Add your description here"
+description = "MCP server with an addition tool"
 readme = "README.md"
 authors = [
     { name = "ishantchoukse", email = "ishantchoukse@fico.com" }
@@ -12,8 +12,14 @@ dependencies = [
 ]
 
 [project.scripts]
-mcp-server-deployment = "mcp_server_deployment:main"
+mcp-server-deployment = "mcp_server_deployment.__main__:main"
 
 [build-system]
-requires = ["uv_build>=0.12.10,<0.13.0"]
-build-backend = "uv_build"
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
