@@ -39,6 +39,31 @@ Add two numbers together.
 add_two_number(5, 3) -> 8
 ```
 
+## Integration with MCP Clients
+
+### Claude Desktop
+
+Add the following to your `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "mcp-server-deployment": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/ishantchoukse/MCP-SERVER-DEPLOYMENT.git",
+        "mcp-server-deployment"
+      ]
+    }
+  }
+}
+```
+
+Config file location:
+- macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+
 ## Development
 
 ### Requirements
